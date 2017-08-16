@@ -9,6 +9,7 @@ function playThisSong(text, song){
   source.setAttribute("src", song);
   var audio = document.getElementById('audio');
   audio.load();
+  audio.play();
 }
 function searchSubmit(){
   fetch("https://itunes.apple.com/search?term=" + input.value)
