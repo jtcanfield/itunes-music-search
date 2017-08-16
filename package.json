@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/jtcanfield/itunes-music-search/issues"
   },
-  "homepage": "https://github.com/jtcanfield/itunes-music-search#readme"
+  "homepage": "https://github.com/jtcanfield/itunes-music-search#readme",
+  "dependencies": {
+    "es6-promise": "^4.1.1",
+    "express": "^4.15.4",
+    "isomorphic-fetch": "^2.2.1",
+    "mustache-express": "^1.2.5"
+  }
 }
