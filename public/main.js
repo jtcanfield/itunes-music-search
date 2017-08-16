@@ -29,7 +29,7 @@ function searchSubmit(){
               parentDiv.setAttribute("class", "songdiv");
               parentbody.appendChild(parentDiv);
             let backgroundimg = document.createElement('img');
-              backgroundimg.setAttribute("style", "background-image: url("+i.artworkUrl100+"); height: 100px; width: 100px;");
+              backgroundimg.setAttribute("src", i.artworkUrl100);
               var quotedsongname = "'" + i.trackName + "<br>Artist: " + i.artistName + "'";
               var preview = "'" + i.previewUrl + "'";
               backgroundimg.setAttribute("onclick", "playThisSong("+quotedsongname+", "+preview+")");

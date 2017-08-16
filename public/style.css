@@ -4,10 +4,18 @@ html {
 #searchappender{
   display: block;
 }
+img {
+  height: 100px;
+  width: 100px;
+}
 .songdiv{
-  border: 2px solid red;
+  border: 1px solid grey;
+  border-radius: 3px;
+  -webkit-box-shadow: -1px 10px 31px -8px rgba(97,97,97,1);
+  -moz-box-shadow: -1px 10px 31px -8px rgba(97,97,97,1);
+  box-shadow: -1px 10px 31px -8px rgba(97,97,97,1);
   display: inline-table;
-  margin: 10px;
+  margin: 20px;
   width: 200px;
   height: 220px;
 }
