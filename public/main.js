@@ -7,6 +7,8 @@ function playThisSong(text, song){
   currentlyplayin.innerHTML = text;
   var source = document.querySelector("source");
   source.setAttribute("src", song);
+  var audio = document.getElementById('audio');
+  audio.load();
 }
 function searchSubmit(){
   fetch("https://itunes.apple.com/search?term=" + input.value)
