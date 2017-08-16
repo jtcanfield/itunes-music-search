@@ -12,10 +12,10 @@ app.set('view engine', 'mustache');
 
 
 
-var input = document.getElementById("textinput");
-input.addEventListener('keypress', function(e) {
-  if (e.keyCode === 13) {searchSubmit();}
-});
+// var input = document.getElementById("textinput");
+// input.addEventListener('keypress', function(e) {
+//   if (e.keyCode === 13) {searchSubmit();}
+// });
 function searchSubmit(){
   fetch("https://itunes.apple.com/search?term=" + "knife")
     .then(
@@ -25,7 +25,6 @@ function searchSubmit(){
           return;
         }
         response.json().then(function(data) {
-          console.log(data);
           app.get('/index/', function (req, res) {
             res.render('index', data);
           });
@@ -36,6 +35,7 @@ function searchSubmit(){
       console.log("Fetch Error: ", err);
     });
 }
+searchSubmit()
 
 
 
