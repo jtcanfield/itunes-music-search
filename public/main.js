@@ -12,7 +12,6 @@ function searchSubmit(){
         }
         response.json().then(function(data) {
           console.log(data);
-          });
         });
       }
     )
