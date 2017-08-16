@@ -26,7 +26,8 @@ function searchSubmit(){
           parentbody.innerHTML = "";
           resultsArray.map((i) =>{
             let parentDiv = document.createElement('div');
-            parentbody.appendChild(parentDiv);
+              parentbody.setAttribute("class", "songdiv");
+              parentbody.appendChild(parentDiv);
             let backgroundimg = document.createElement('img');
               backgroundimg.setAttribute("style", "background-image: url("+i.artworkUrl100+"); height: 100px; width: 100px;");
               var quotedsongname = "'" + i.trackName + "<br>Artist: " + i.artistName + "'";
