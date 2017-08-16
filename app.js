@@ -11,7 +11,7 @@ app.set('views', './views');
 app.set('view engine', 'mustache');
 
 app.get('/index/', function (req, res) {
-  res.render('index', data);
+  res.render('index');
 });
 
 app.listen(port, function(){
