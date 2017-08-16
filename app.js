@@ -11,3 +11,7 @@ app.set('view engine', 'mustache');
 app.get('/index/', function (req, res) {
   res.render('index', data);
 });
+
+app.listen(port, function(){
+  console.log("Server active on http://localhost:3000/");
+});
