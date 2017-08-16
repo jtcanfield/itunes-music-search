@@ -3,7 +3,7 @@ input.addEventListener('keypress', function(e) {
   if (e.keyCode === 13) {searchSubmit();}
 });
 function searchSubmit(){
-  fetch("https://itunes.apple.com/search?term=" + "knife")
+  fetch("https://itunes.apple.com/search?term=" + input.value)
     .then(
       function(response) {
         if (response.status !== 200) {
