@@ -1,8 +1,12 @@
 html {
   text-align: center;
 }
+#searchappender{
+  display: block;
+}
 .songdiv{
-  display: inline-block;
+  border: 2px solid red;
+  display: inline-table;
   margin: 10px;
   width: 200px;
   height: 220px;
