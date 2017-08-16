@@ -2,6 +2,10 @@ var input = document.getElementById("textinput");
 input.addEventListener('keypress', function(e) {
   if (e.keyCode === 13) {searchSubmit();}
 });
+function playThisSong(x){
+  var currentlyplayin = document.getElementById("currentlyplaying");
+  currentlyplayin.innerHTML = x
+}
 function searchSubmit(){
   fetch("https://itunes.apple.com/search?term=" + input.value)
     .then(
@@ -18,7 +22,8 @@ function searchSubmit(){
             let parentDiv = document.createElement('div');
             parentbody.appendChild(parentDiv);
             let backgroundimg = document.createElement('img');
-            backgroundimg.setAttribute("style", "background-image: url("+i.artworkUrl100+"); height: 100px; width: 100px;");
+              backgroundimg.setAttribute("style", "background-image: url("+i.artworkUrl100+"); height: 100px; width: 100px;");
+              backgroundimg.setAttribute("onclick", "playThisSong("+i.trackName+")");
             let artistname = document.createElement('a');
               artistname.innerHTML = "<br>Artist: " + i.artistName;
               artistname.setAttribute("href", i.artistViewUrl);
