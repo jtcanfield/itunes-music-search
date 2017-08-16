@@ -23,7 +23,7 @@ function searchSubmit(){
             parentbody.appendChild(parentDiv);
             let backgroundimg = document.createElement('img');
               backgroundimg.setAttribute("style", "background-image: url("+i.artworkUrl100+"); height: 100px; width: 100px;");
-              var quotedsongname = "'" + i.trackName + "'";
+              var quotedsongname = "'" + i.trackName + "<br>Artist: " + i.artistName + "'";
               backgroundimg.setAttribute("onclick", "playThisSong("+quotedsongname+")");
             let artistname = document.createElement('a');
               artistname.innerHTML = "<br>Artist: " + i.artistName;
