@@ -4,7 +4,7 @@ input.addEventListener('keypress', function(e) {
 });
 function playThisSong(x){
   var currentlyplayin = document.getElementById("currentlyplaying");
-  currentlyplayin.innerHTML = x
+  currentlyplayin.innerHTML = x;
 }
 function searchSubmit(){
   fetch("https://itunes.apple.com/search?term=" + input.value)
@@ -23,7 +23,8 @@ function searchSubmit(){
             parentbody.appendChild(parentDiv);
             let backgroundimg = document.createElement('img');
               backgroundimg.setAttribute("style", "background-image: url("+i.artworkUrl100+"); height: 100px; width: 100px;");
-              backgroundimg.setAttribute("onclick", "playThisSong("+i.trackName+")");
+              var quotedsongname = "'" + i.trackName + "'";
+              backgroundimg.setAttribute("onclick", "playThisSong("+quotedsongname+")");
             let artistname = document.createElement('a');
               artistname.innerHTML = "<br>Artist: " + i.artistName;
               artistname.setAttribute("href", i.artistViewUrl);
