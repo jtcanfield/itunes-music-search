@@ -34,15 +34,15 @@ function searchSubmit(){
               var preview = "'" + i.previewUrl + "'";
               backgroundimg.setAttribute("onclick", "playThisSong("+quotedsongname+", "+preview+")");
             let artistname = document.createElement('a');
-              artistname.innerHTML = "<br>Artist: " + i.artistName;
+              artistname.innerHTML = "<br><strong>Artist:</strong> " + i.artistName;
               artistname.setAttribute("href", i.artistViewUrl);
               artistname.setAttribute("target", "_blank");
             let songname = document.createElement('a');
-              songname.innerHTML = "<br>Track Name: " + i.trackName;
+              songname.innerHTML = "<br><strong>Track Name:</strong> " + i.trackName;
               songname.setAttribute("href", i.trackViewUrl);
               songname.setAttribute("target", "_blank");
             let albumname = document.createElement('a');
-              albumname.innerHTML = "<br>Album: " + i.collectionName;
+              albumname.innerHTML = "<br><strong>Album:</strong> " + i.collectionName;
               albumname.setAttribute("href", i.collectionViewUrl);
               albumname.setAttribute("target", "_blank");
             parentDiv.appendChild(backgroundimg);
