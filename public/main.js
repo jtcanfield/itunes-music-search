@@ -2,9 +2,9 @@ var input = document.getElementById("textinput");
 input.addEventListener('keypress', function(e) {
   if (e.keyCode === 13) {searchSubmit();}
 });
-function playThisSong(x){
+function playThisSong(text, link){
   var currentlyplayin = document.getElementById("currentlyplaying");
-  currentlyplayin.innerHTML = x;
+  currentlyplayin.innerHTML = text;
 }
 function searchSubmit(){
   fetch("https://itunes.apple.com/search?term=" + input.value)
@@ -15,6 +15,7 @@ function searchSubmit(){
           return;
         }
         response.json().then(function(data) {
+          console.log(data)
           let resultsArray = data.results;
           let parentbody = document.querySelector('#searchappender');
           parentbody.innerHTML = "";
@@ -24,7 +25,8 @@ function searchSubmit(){
             let backgroundimg = document.createElement('img');
               backgroundimg.setAttribute("style", "background-image: url("+i.artworkUrl100+"); height: 100px; width: 100px;");
               var quotedsongname = "'" + i.trackName + "<br>Artist: " + i.artistName + "'";
-              backgroundimg.setAttribute("onclick", "playThisSong("+quotedsongname+")");
+              var preview = "'" + i.previewUrl + "'";
+              backgroundimg.setAttribute("onclick", "playThisSong("+quotedsongname+", "+preview+")");
             let artistname = document.createElement('a');
               artistname.innerHTML = "<br>Artist: " + i.artistName;
               artistname.setAttribute("href", i.artistViewUrl);
