@@ -26,7 +26,7 @@ function searchSubmit(){
           parentbody.innerHTML = "";
           resultsArray.map((i) =>{
             let parentDiv = document.createElement('div');
-              parentbody.setAttribute("class", "songdiv");
+              parentDiv.setAttribute("class", "songdiv");
               parentbody.appendChild(parentDiv);
             let backgroundimg = document.createElement('img');
               backgroundimg.setAttribute("style", "background-image: url("+i.artworkUrl100+"); height: 100px; width: 100px;");
