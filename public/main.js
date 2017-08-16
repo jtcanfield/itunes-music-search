@@ -2,9 +2,11 @@ var input = document.getElementById("textinput");
 input.addEventListener('keypress', function(e) {
   if (e.keyCode === 13) {searchSubmit();}
 });
-function playThisSong(text, link){
+function playThisSong(text, song){
   var currentlyplayin = document.getElementById("currentlyplaying");
   currentlyplayin.innerHTML = text;
+  var source = document.querySelector("source");
+  source.setAttribute("src", song);
 }
 function searchSubmit(){
   fetch("https://itunes.apple.com/search?term=" + input.value)
