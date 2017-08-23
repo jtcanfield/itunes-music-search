@@ -2,6 +2,14 @@ var input = document.getElementById("textinput");
 input.addEventListener('keypress', function(e) {
   if (e.keyCode === 13) {searchSubmit();}
 });
+
+window.addEventListener('scroll', function(){
+  console.log(window.pageYOffset)
+  if (window.pageYOffset > 230){
+
+  }
+}, false);
+
 function playThisSong(text, song){
   var currentlyplayin = document.getElementById("currentlyplaying");
   currentlyplayin.innerHTML = text;
@@ -23,7 +31,7 @@ function searchSubmit(){
           let parentbody = document.querySelector('#searchappender');
           parentbody.innerHTML = "";
           if (data.resultCount === 0){
-            parentbody.innerHTML = "No Results. :-(";
+            parentbody.innerHTML = "<br>No Results. :-(";
           }
           let resultsArray = data.results;
           resultsArray.map((i) =>{
