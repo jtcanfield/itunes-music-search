@@ -2,6 +2,22 @@ html {
   text-align: center;
   background-color: #AAFFFF;
 }
+@-webkit-keyframes fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadein {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
 #searchappender{
   display: block;
   position: absolute;
@@ -26,6 +42,10 @@ img {
   height: 220px;
 }
 .topbarfixed{
+  -webkit-animation: fadein 1s 1;
+  -moz-animation: fadein 1s 1;
+  -o-animation: fadein 1s 1;
+  animation: fadein 1s 1;
   z-index: 10;
   position: fixed;
   top: 0px;
