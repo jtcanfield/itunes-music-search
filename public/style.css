@@ -1,5 +1,6 @@
 html {
   text-align: center;
+  background-color: #AAFFFF;
 }
 #searchappender{
   display: block;
@@ -11,6 +12,7 @@ img {
 .songdiv{
   border: 1px solid grey;
   border-radius: 3px;
+  background-color: #FFBEFF;
   -webkit-box-shadow: -1px 10px 31px -8px rgba(97,97,97,1);
   -moz-box-shadow: -1px 10px 31px -8px rgba(97,97,97,1);
   box-shadow: -1px 10px 31px -8px rgba(97,97,97,1);
