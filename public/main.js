@@ -4,9 +4,12 @@ input.addEventListener('keypress', function(e) {
 });
 
 window.addEventListener('scroll', function(){
-  console.log(window.pageYOffset)
-  if (window.pageYOffset > 230){
-
+  console.log(window.pageYOffset);
+  var searchitems = document.getElementById("searchelements");
+  if (window.pageYOffset < 230){
+    searchelements.classList.remove('topbarfixed');
+  } else if (window.pageYOffset >= 230){
+    searchelements.classList.add('topbarfixed');
   }
 }, false);
 
