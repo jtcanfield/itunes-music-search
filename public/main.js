@@ -20,10 +20,12 @@ function searchSubmit(){
           return;
         }
         response.json().then(function(data) {
-          console.log(data)
-          let resultsArray = data.results;
           let parentbody = document.querySelector('#searchappender');
           parentbody.innerHTML = "";
+          if (data.resultCount === 0){
+            parentbody.innerHTML = "No Results. :-(";
+          }
+          let resultsArray = data.results;
           resultsArray.map((i) =>{
             let parentDiv = document.createElement('div');
               parentDiv.setAttribute("class", "songdiv");
